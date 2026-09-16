@@ -1,0 +1,10 @@
+{
+  "name": "playground-pnpm-dedupe-instability-bug",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "dependencies": {
+    "boxen": "5.1.2",
+    "chalk": "4.1.0"
+  }
+}
