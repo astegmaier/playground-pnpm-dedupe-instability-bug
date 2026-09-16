@@ -1,5 +1,7 @@
 # pnpm dedupe requires two passes to reach a fixed point
 
+Upstream issue: [pnpm/pnpm#14987](https://github.com/pnpm/pnpm/issues/14987)
+
 This repository is a minimal reproduction for a `pnpm dedupe` instability in pnpm 11.x.
 It uses only public packages from the npm registry and pins pnpm 11.25.0 through the
 `packageManager` field.
