@@ -22,9 +22,6 @@ The expected invariant is that `pnpm dedupe` reaches a fixed point in one run, s
 To test another pnpm version, temporarily update the `packageManager` field before running the
 steps below.
 
-The committed `.npmrc` pins the public npm registry and restates pnpm 11's default
-`resolution-mode=highest` so a global user configuration cannot mask the reproduction.
-
 ## Reproduction
 
 1. Install the committed baseline:
