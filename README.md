@@ -19,12 +19,6 @@ dependency but leaves `boxen` on `chalk@4.1.0`. A second dedupe pass removes the
 The expected invariant is that `pnpm dedupe` reaches a fixed point in one run, so
 `pnpm dedupe && pnpm dedupe --check` should succeed.
 
-## Versions tested
-
-- pnpm 11.25.0: reproduces
-- pnpm 11.27.0: reproduces
-- pnpm 12.4.2: does not reproduce; the change that altered this behavior has not been bisected
-
 To test another pnpm version, temporarily update the `packageManager` field before running the
 steps below.
 
@@ -106,3 +100,13 @@ To return to the committed baseline:
 git restore package.json pnpm-lock.yaml
 pnpm install --frozen-lockfile
 ```
+
+## Affected Versions
+
+| pnpm versions | Result |
+|---|---:|
+| 8.0.0–8.15.9 | ✅ No repro |
+| 9.0.0–9.15.9 | ✅ No repro |
+| 10.0.0–10.34.5 | ✅ No repro |
+| 11.0.0–11.27.0 | ❌ Repro |
+| 12.0.0–12.4.2 | ✅ No repro |
